@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Portfolio | Research Log</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="page-blogs">
+
+    <!-- Hamburger Button for Mobile -->
+    <div class="hamburger-btn" onclick="toggleSidebar()">
+        <div class="hamburger-line"></div>
+        <div class="hamburger-line"></div>
+        <div class="hamburger-line"></div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <div class="container">
+
+        <div style="margin-bottom: 1rem; grid-column: 1 / -1;">
+            <a class="return-link" href="index.html">&lt; RETURN_HOME</a>
+        </div>
+
+        <div class="nav-crumb">
+            <a href="index.html">root</a> / <span>var</span> / <span>logs</span>
+        </div>
+
+        <div class="timeline">
+
+            <div class="log-entry">
+                <div class="entry-header">
+                    <span class="commit-hash">503_Svc</span>
+                    <span class="badge badge-fix">Maintenance</span>
+                </div>
+                <a href="#" class="entry-title">🚧 Blog Under Construction 🚧</a>
+                <div class="entry-meta">
+                    <span>Current Time</span>
+                    <span>// Refactoring Thoughts</span>
+                </div>
+                <div class="entry-excerpt">
+                    <p>I'm currently compiling my latest adventures in data. In the meantime, here is a live feed of my
+                        brain:</p>
+
+                    <div class="code-block">
+                        <span class="kw">while</span> (<span class="bool">!</span>inspiration) {<br>
+                        &nbsp;&nbsp;coffee.<span class="func">consume</span>();<br>
+                        &nbsp;&nbsp;<span class="kw">if</span> (coffee.isEmpty()) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;panic();<br>
+                        &nbsp;&nbsp;}<br>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <div class="log-entry">
+                <div class="entry-header">
+                    <span class="commit-hash">b7f93a1</span>
+                    <span class="badge badge-exp">Experiment</span>
+                </div>
+                <a href="#" class="entry-title">Why I switched from Pandas to Polars for large datasets</a>
+                <div class="entry-meta">
+                    <span>Nov 18, 2025</span>
+                    <span>// Performance Tuning</span>
+                </div>
+                <div class="entry-excerpt">
+                    <p>Processing the 5GB transaction dataset was taking 45 seconds in Pandas. By switching to Polars
+                        lazy execution, I reduced load time to 4 seconds.</p>
+
+                    <div class="code-block">
+                        <span class="kw">import</span> polars <span class="kw">as</span> pl<br>
+                        <br>
+                        <span class="func"># The Pandas way (slow)</span><br>
+                        <span class="func"># df = pd.read_csv("heavy_data.csv")</span><br>
+                        <br>
+                        <span class="func"># The Polars way (fast)</span><br>
+                        q = (pl.<span class="func">scan_csv</span>(<span class="str">"heavy_data.csv"</span>)<br>
+                        &nbsp;&nbsp;.filter(pl.<span class="func">col</span>(<span class="str">"amount"</span>) > <span
+                            class="str">100</span>))<br>
+                        df = q.<span class="func">collect</span>()
+                    </div>
+                </div>
+            </div>
+
+            <div class="log-entry">
+                <div class="entry-header">
+                    <span class="commit-hash">a12c4e9</span>
+                    <span class="badge badge-feat">Tutorial</span>
+                </div>
+                <a href="#" class="entry-title">Building a Streamlit Dashboard for Executive Reporting</a>
+                <div class="entry-meta">
+                    <span>Oct 05, 2025</span>
+                    <span>// Visualization</span>
+                </div>
+                <div class="entry-excerpt">
+                    <p>Execs don't want Jupyter Notebooks. They want buttons. Here is how I wrapped my Python prediction
+                        model into a simple UI.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <aside class="sidebar">
+            <div class="readme-card">
+                <div class="readme-header">
+                    <span>📝</span>
+                    <span>README.md</span>
+                </div>
+                <p class="readme-description">
+                    This log tracks my experiments, tutorials, and data engineering failures.
+                </p>
+
+                <div class="readme-header readme-header--compact">
+                    CURRENT_STACK
+                </div>
+                <ul class="readme-list">
+                    <li>Python 3.11</li>
+                    <li>R 4.3.1</li>
+                    <li>Tableau Desktop</li>
+                    <li>PostgreSQL</li>
+                </ul>
+
+                <div class="readme-header readme-header--compact">
+                    TOPICS
+                </div>
+                <div class="topic-badges">
+                    <span class="badge badge-feat">#Viz</span>
+                    <span class="badge badge-exp">#ML</span>
+                    <span class="badge badge-fix">#Eng</span>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <footer class="project-footer">
+        <p>© 2025 Data Portfolio | Built with precision and passion for data-driven insights</p>
+    </footer>
+
+    <script>
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('active');
+            document.querySelector('.sidebar-overlay').classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

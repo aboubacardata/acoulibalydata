@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Portfolio | System Config</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="page-resume">
+
+    <div class="return-wrapper">
+        <a class="return-link" href="index.html">&lt; root_directory</a>
+    </div>
+
+    <div class="construction-message" style="text-align: center; margin-top: 100px; color: var(--color-text-primary);">
+        <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">⚠️ 404: Resume Not Found</h1>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem;">The ninja is currently debugging their career history.
+        </p>
+        <div class="code-block"
+            style="display: inline-block; text-align: left; padding: 2rem; background: rgba(0,0,0,0.3); border-radius: 8px; border: 1px solid var(--color-border);">
+            <span style="color: #c678dd;">try</span> {<br>
+            &nbsp;&nbsp;<span style="color: #61afef;">loadResume</span>();<br>
+            } <span style="color: #c678dd;">catch</span> (LifeHappensException e) {<br>
+            &nbsp;&nbsp;<span style="color: #e5c07b;">console</span>.<span style="color: #61afef;">log</span>(<span
+                style="color: #98c379;">"Updating skills..."</span>);<br>
+            &nbsp;&nbsp;<span style="color: #c678dd;">await</span> <span
+                style="color: #61afef;">betterVersion</span>();<br>
+            }
+        </div>
+    </div>
+
+    <!--
+    <div class="resume-shell">
+        <div class="window-header">
+            <span class="window-title">user_profile.json</span>
+            <div class="window-controls">
+                <div class="dot red"></div>
+                <div class="dot yellow"></div>
+                <div class="dot green"></div>
+            </div>
+        </div>
+
+        <div class="code-body">
+            <div class="line"><span class="key">const</span> <span class="obj-key">Candidate</span> = <span class="bracket">{</span></div>
+            
+            <div class="line indent-1">
+                <span class="obj-key">"name"</span>: <span class="val">"Your Name"</span>,
+            </div>
+            <div class="line indent-1">
+                <span class="obj-key">"role"</span>: <span class="val">"Data Analytics Engineer"</span>,
+            </div>
+            <div class="line indent-1">
+                <span class="obj-key">"location"</span>: <span class="val">"Remote / Hybrid"</span>,
+            </div>
+            <br>
+
+            <div class="line indent-1">
+                <span class="obj-key">"runtime_history"</span>: <span class="bracket">[</span>
+            </div>
+
+            <div class="exp-block">
+                <div class="line indent-2"><span class="bracket">{</span></div>
+                <div class="line indent-2">&nbsp;&nbsp;<span class="obj-key">"company"</span>: <span class="val">"Fintech Global"</span>,</div>
+                <div class="line indent-2">&nbsp;&nbsp;<span class="obj-key">"year"</span>: <span class="val">"2022 - Present"</span>,</div>
+                <div class="line indent-2">&nbsp;&nbsp;<span class="obj-key">"impact"</span>: <span class="val">"Reduced query latency by 40% using Polars."</span></div>
+                <div class="line indent-2"><span class="bracket">},</span></div>
+            </div>
+
+            <div class="exp-block">
+                <div class="line indent-2"><span class="bracket">{</span></div>
+                <div class="line indent-2">&nbsp;&nbsp;<span class="obj-key">"company"</span>: <span class="val">"E-Comm Startup"</span>,</div>
+                <div class="line indent-2">&nbsp;&nbsp;<span class="obj-key">"year"</span>: <span class="val">"2020 - 2022"</span>,</div>
+                <div class="line indent-2">&nbsp;&nbsp;<span class="obj-key">"impact"</span>: <span class="val">"Built Tableau dashboard used by C-Suite daily."</span></div>
+                <div class="line indent-2"><span class="bracket">}</span></div>
+            </div>
+
+            <div class="line indent-1"><span class="bracket">],</span></div>
+            <br>
+
+            <div class="line indent-1">
+                <span class="obj-key">"peer_reviews"</span>: <span class="key">function</span>() <span class="bracket">{</span>
+            </div>
+
+            <div class="reviews-container indent-2">
+                <button class="run-btn" onclick="runDiagnostics()">
+                    <span>▶</span> RUN_PEER_REVIEWS()
+                </button>
+
+                <div id="console" class="console-output">
+                    <div class="console-status">&gt; Fetching logs from LinkedIn API... OK</div>
+                    
+                    <div class="log-entry">
+                        <span class="log-user">[CTO @ Fintech Global]:</span> 
+                        <span class="log-msg">"Best data hire we made. They don't just pull numbers, they find the business logic errors."</span>
+                    </div>
+
+                    <div class="log-entry">
+                        <span class="log-user">[Product Manager @ E-Comm]:</span> 
+                        <span class="log-msg">"The dashboard they built literally saved us 10 hours of meetings a week."</span>
+                    </div>
+
+                    <div class="console-end">&gt; END OF LOGS</div>
+                </div>
+            </div>
+
+            <div class="line indent-1"><span class="bracket">}</span></div>
+
+            <div class="line"><span class="bracket">}</span>;</div>
+        </div>
+    </div>
+
+    <a href="#" class="download-fab">
+        <span>⬇</span> EXPORT_CONFIG.PDF
+    </a>
+    -->
+
+    <script>
+        function runDiagnostics() {
+            const consoleDiv = document.getElementById('console');
+            const btn = document.querySelector('.run-btn');
+
+            // Simulate "Loading"
+            btn.innerHTML = "LOADING...";
+
+            setTimeout(() => {
+                consoleDiv.style.display = "block";
+                btn.innerHTML = "✔ DIAGNOSTICS COMPLETE";
+                btn.style.borderColor = "#22c55e";
+                btn.style.color = "#22c55e";
+            }, 800);
+        }
+    </script>
+
+    <footer class="project-footer" style="text-align: center; padding: 2rem 0; color: var(--color-text-secondary);">
+        <p>© 2025 Data Portfolio | Built with precision and passion for data-driven insights</p>
+    </footer>
+
+</body>
+
+</html>

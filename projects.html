@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Portfolio | Project Matrix</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="page-projects">
+
+    <!-- Hamburger Button for Mobile -->
+    <div class="hamburger-btn" onclick="toggleSidebar()">
+        <div class="hamburger-line"></div>
+        <div class="hamburger-line"></div>
+        <div class="hamburger-line"></div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <!-- Mobile Filter Navigation -->
+    <div class="mobile-filter-nav">
+        <div class="mobile-filter-header">
+            <a class="mobile-return-link" href="index.html">&lt; RETURN_HOME</a>
+            <div class="mobile-filter-title">Projects</div>
+        </div>
+        <div class="mobile-filter-groups">
+            <div class="mobile-filter-group">
+                <button class="mobile-filter-btn" data-filter="python" onclick="toggleMobileFilter('python')">
+                    Python
+                </button>
+                <button class="mobile-filter-btn" data-filter="r" onclick="toggleMobileFilter('r')">
+                    R Stats
+                </button>
+                <button class="mobile-filter-btn" data-filter="tableau" onclick="toggleMobileFilter('tableau')">
+                    Tableau
+                </button>
+            </div>
+            <div class="mobile-filter-separator"></div>
+            <div class="mobile-filter-group">
+                <button class="mobile-filter-btn" data-filter="fintech" onclick="toggleMobileFilter('fintech')">
+                    Fintech
+                </button>
+                <button class="mobile-filter-btn" data-filter="ecomm" onclick="toggleMobileFilter('ecomm')">
+                    E-Comm
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="layout-container">
+
+        <aside class="sidebar">
+            <div>
+                <a class="return-link" href="index.html">&lt; RETURN_HOME</a>
+            </div>
+
+            <h3>// FILTER_BY_TOOL</h3>
+            <div class="filter-group">
+                <div class="filter-row" onclick="filterProjects('python')">
+                    <div class="filter-label">Python</div>
+                    <div class="filter-bar-bg">
+                        <div class="filter-bar-fill progress-80"></div>
+                    </div>
+                </div>
+                <div class="filter-row" onclick="filterProjects('r')">
+                    <div class="filter-label">R Stats</div>
+                    <div class="filter-bar-bg">
+                        <div class="filter-bar-fill progress-60"></div>
+                    </div>
+                </div>
+                <div class="filter-row" onclick="filterProjects('tableau')">
+                    <div class="filter-label">Tableau</div>
+                    <div class="filter-bar-bg">
+                        <div class="filter-bar-fill progress-40"></div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>// FILTER_BY_DOMAIN</h3>
+            <div class="filter-group">
+                <div class="filter-row" onclick="filterProjects('fintech')">
+                    <div class="filter-label">Fintech</div>
+                    <div class="filter-bar-bg">
+                        <div class="filter-bar-fill progress-70"></div>
+                    </div>
+                </div>
+                <div class="filter-row" onclick="filterProjects('ecomm')">
+                    <div class="filter-label">E-Comm</div>
+                    <div class="filter-bar-bg">
+                        <div class="filter-bar-fill progress-50"></div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+
+            <div class="toolbar">
+                <div class="query-display">
+                    > SELECT * FROM portfolio WHERE status = 'IMPACTFUL'<span class="blink">_</span>
+                </div>
+
+                <div class="view-toggle">
+                    <button class="toggle-btn active" id="btn-biz" onclick="toggleView('biz')">BIZ_VIEW</button>
+                    <button class="toggle-btn" id="btn-tech" onclick="toggleView('tech')">TECH_VIEW</button>
+                </div>
+            </div>
+
+            <div class="project-grid" id="grid">
+
+
+
+                <div class="project-card" data-tags="python fintech"
+                    onclick="window.location.href='projects/reseller-analysis/index.html'" style="cursor: pointer;">
+                    <div class="card-header">
+                        <span class="folder-icon">📊</span>
+                        <span class="project-id">ID: 001</span>
+                    </div>
+                    <div class="project-title">Reseller Segmentation Analysis</div>
+
+                    <div class="desc-box">
+                        <div class="biz-view">
+                            Flagged <strong>5,622 revenue-critical resellers</strong> who contribute <strong>92.12% of
+                                total revenue</strong> (despite being only 6.61% of users), triggering focused retention
+                            actions, tailored support workflows, and improved enforcement mechanisms.
+                        </div>
+                        <div class="tech-view">
+                            > Box-Cox Transformation<br>
+                            > Statistical Outlier Detection<br>
+                            > 85,099 Users Analyzed<br>
+                            > Libs: Pandas, SciPy, NumPy
+                        </div>
+                    </div>
+
+                    <div class="tag-row">
+                        <span class="tag highlight">Python</span>
+                        <span class="tag">Statistics</span>
+                        <span class="tag">Segmentation</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-tags="python statistics"
+                    onclick="window.location.href='projects/segmentation-analysis/index.html'" style="cursor: pointer;">
+                    <div class="card-header">
+                        <span class="folder-icon">🐋</span>
+                        <span class="project-id">ID: 002</span>
+                    </div>
+                    <div class="project-title">Revenue Density & 6-Tier Segmentation</div>
+
+                    <div class="desc-box">
+                        <div class="biz-view">
+                            Identified <strong>"Mega Whales" (top 1.5% of users)</strong> driving <strong>81% of
+                                revenue</strong>, enabling targeted white-glove support strategies and optimizing
+                            resource allocation.
+                        </div>
+                        <div class="tech-view">
+                            > Log Scale Visualization<br>
+                            > Skewness Analysis (Score: 25.33)<br>
+                            > 6-Tier Segmentation Model<br>
+                            > Libs: Pandas, Matplotlib, Seaborn
+                        </div>
+                    </div>
+
+                    <div class="tag-row">
+                        <span class="tag highlight">Python</span>
+                        <span class="tag">Statistics</span>
+                        <span class="tag">Segmentation</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-tags="tableau finance collections"
+                    onclick="window.location.href='projects/loan-payment-dashboard/index.html'"
+                    style="cursor: pointer;">
+                    <div class="card-header">
+                        <span class="folder-icon">💰</span>
+                        <span class="project-id">ID: 003</span>
+                    </div>
+                    <div class="project-title">Loan Payment & Collections</div>
+
+                    <div class="desc-box">
+                        <div class="biz-view">
+                            <strong>Real-time monitoring</strong> of 201M+ expected payments, default rates, and branch
+                            performance to improve <strong>cash flow forecasting</strong> and recovery.
+                        </div>
+                        <div class="tech-view">
+                            > Tableau Dashboard<br>
+                            > Default Rate Heatmaps<br>
+                            > Trend Analysis<br>
+                            > Interactive Filters
+                        </div>
+                    </div>
+
+                    <div class="tag-row">
+                        <span class="tag highlight">Tableau</span>
+                        <span class="tag">Finance</span>
+                        <span class="tag">Collections</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-tags="python fintech operations"
+                    onclick="window.location.href='projects/loan-disbursement-speed/index.html'"
+                    style="cursor: pointer;">
+                    <div class="card-header">
+                        <span class="folder-icon">⚡</span>
+                        <span class="project-id">ID: 004</span>
+                    </div>
+                    <div class="project-title">Loan Disbursement Speed Optimization</div>
+
+                    <div class="desc-box">
+                        <div class="biz-view">
+                            Diagnosed root causes of <strong>40-hour processing latency</strong>, establishing a
+                            <strong>17-hour "Golden Window"</strong> to maximize repayment and reduce cancellation
+                            rates.
+                        </div>
+                        <div class="tech-view">
+                            > Hypothesis Testing<br>
+                            > Process Mining<br>
+                            > Segmentation Analysis<br>
+                            > Operational SLA Design
+                        </div>
+                    </div>
+
+                    <div class="tag-row">
+                        <span class="tag highlight">Python</span>
+                        <span class="tag">Fintech</span>
+                        <span class="tag">Operations</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-tags="r dashboard geospatial"
+                    onclick="window.location.href='projects/city-coverage/index.html'" style="cursor: pointer;">
+                    <div class="card-header">
+                        <span class="folder-icon">🗺️</span>
+                        <span class="project-id">ID: 005</span>
+                    </div>
+                    <div class="project-title">City Coverage Analysis</div>
+
+                    <div class="desc-box">
+                        <div class="biz-view">
+                            Real-time dashboard for city managers to monitor performance, visualize coverage gaps, and
+                            <strong>automate CRM workflows</strong> for 30% faster response times.
+                        </div>
+                        <div class="tech-view">
+                            > R Shiny Web App<br>
+                            > Leaflet & Plotly Viz<br>
+                            > Real-time Data Pipeline<br>
+                            > CRM API Integration
+                        </div>
+                    </div>
+
+                    <div class="tag-row">
+                        <span class="tag highlight">R Shiny</span>
+                        <span class="tag">Dashboard</span>
+                        <span class="tag">Geospatial</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-tags="tableau geospatial operations"
+                    onclick="window.location.href='projects/driver-fulfillment/index.html'" style="cursor: pointer;">
+                    <div class="card-header">
+                        <span class="folder-icon">📍</span>
+                        <span class="project-id">ID: 006</span>
+                    </div>
+                    <div class="project-title">Driver Fulfillment Hotspot Mapping</div>
+
+                    <div class="desc-box">
+                        <div class="biz-view">
+                            Visualized driver fulfillment across Nairobi, identifying supply-demand gaps and enabling
+                            <strong>efficient driver deployment</strong> during peak failure times.
+                        </div>
+                        <div class="tech-view">
+                            > Tableau Dashboard<br>
+                            > Custom Geocoding<br>
+                            > Spatial Analysis<br>
+                            > 24-Hour Heat Grid
+                        </div>
+                    </div>
+
+                    <div class="tag-row">
+                        <span class="tag highlight">Tableau</span>
+                        <span class="tag">Geospatial</span>
+                        <span class="tag">Operations</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-tags="powerbi hospitality revenue"
+                    onclick="window.location.href='projects/hotel-revenue-dashboard/index.html'"
+                    style="cursor: pointer;">
+                    <div class="card-header">
+                        <span class="folder-icon">🏨</span>
+                        <span class="project-id">ID: 007</span>
+                    </div>
+                    <div class="project-title">Hotel Revenue Analytics Dashboard</div>
+
+                    <div class="desc-box">
+                        <div class="biz-view">
+                            <strong>Maximized profitability</strong> by monitoring 509K+ revenue and optimizing pricing
+                            strategies across city and resort segments.
+                        </div>
+                        <div class="tech-view">
+                            > Power BI Dashboard<br>
+                            > Dynamic Pricing Analysis<br>
+                            > Customer Segmentation<br>
+                            > Real-time Alerts
+                        </div>
+                    </div>
+
+                    <div class="tag-row">
+                        <span class="tag highlight">Power BI</span>
+                        <span class="tag">Hospitality</span>
+                        <span class="tag">Revenue</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-tags="tableau hr dashboard"
+                    onclick="window.location.href='projects/hr-analytics-dashboard/index.html'"
+                    style="cursor: pointer;">
+                    <div class="card-header">
+                        <span class="folder-icon">👥</span>
+                        <span class="project-id">ID: 008</span>
+                    </div>
+                    <div class="project-title">HR Analytics Dashboard</div>
+
+                    <div class="desc-box">
+                        <div class="biz-view">
+                            Centralized workforce intelligence dashboard enabling <strong>data-backed decisions</strong>
+                            on recruitment, performance, and compensation strategies.
+                        </div>
+                        <div class="tech-view">
+                            > Tableau Dashboard<br>
+                            > Interactive Maps & Filters<br>
+                            > Calculated Fields<br>
+                            > Data Blending
+                        </div>
+                    </div>
+
+                    <div class="tag-row">
+                        <span class="tag highlight">Tableau</span>
+                        <span class="tag">HR</span>
+                        <span class="tag">Dashboard</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-tags="powerbi finance operations"
+                    onclick="window.location.href='projects/operational-capex-dashboard/index.html'"
+                    style="cursor: pointer;">
+                    <div class="card-header">
+                        <span class="folder-icon">🏗️</span>
+                        <span class="project-id">ID: 009</span>
+                    </div>
+                    <div class="project-title">Operational CapEx Dashboard</div>
+
+                    <div class="desc-box">
+                        <div class="biz-view">
+                            <strong>Optimized capital allocation</strong> by tracking 135K+ EUR in CapEx, identifying
+                            cost-saving opportunities, and reducing manual reconciliation errors.
+                        </div>
+                        <div class="tech-view">
+                            > Power BI Dashboard<br>
+                            > YoY Variance Analysis<br>
+                            > Supplier Spend Tracking<br>
+                            > Data Governance Alerts
+                        </div>
+                    </div>
+
+                    <div class="tag-row">
+                        <span class="tag highlight">Power BI</span>
+                        <span class="tag">Finance</span>
+                        <span class="tag">Operations</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-tags="tableau geospatial urban-planning"
+                    onclick="window.location.href='projects/proximity-analysis/index.html'" style="cursor: pointer;">
+                    <div class="card-header">
+                        <span class="folder-icon">✈️</span>
+                        <span class="project-id">ID: 010</span>
+                    </div>
+                    <div class="project-title">Proximity & Buffer Analysis</div>
+
+                    <div class="desc-box">
+                        <div class="biz-view">
+                            Visualized spatial relationships between airports and shopping centers, aiding <strong>real
+                                estate site selection</strong> and <strong>airport commercial planning</strong>.
+                        </div>
+                        <div class="tech-view">
+                            > Tableau Geospatial Engine<br>
+                            > Buffer (Radius) Analysis<br>
+                            > Custom Geocoding<br>
+                            > Point-to-Polygon Mapping
+                        </div>
+                    </div>
+
+                    <div class="tag-row">
+                        <span class="tag highlight">Tableau</span>
+                        <span class="tag">Geospatial</span>
+                        <span class="tag">Urban Planning</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-tags="python marketing analytics"
+                    onclick="window.location.href='projects/organic-multiplier/index.html'" style="cursor: pointer;">
+                    <div class="card-header">
+                        <span class="folder-icon">🗣️</span>
+                        <span class="project-id">ID: 011</span>
+                    </div>
+                    <div class="project-title">Word of Mouth (WOM) Dashboard</div>
+
+                    <div class="desc-box">
+                        <div class="biz-view">
+                            Quantified the "Viral Loop" by proving a <strong>0.74 correlation</strong> between
+                            paid/returning users and organic growth, validating "WOM" as a predictable revenue driver.
+                        </div>
+                        <div class="tech-view">
+                            > Regression Analysis (R²=0.55)<br>
+                            > Time-Series Forecasting<br>
+                            > Granularity Optimization<br>
+                            > Python / Pandas / Scikit-Learn
+                        </div>
+                    </div>
+
+                    <div class="tag-row">
+                        <span class="tag highlight">Python</span>
+                        <span class="tag">Marketing</span>
+                        <span class="tag">Analytics</span>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // --- TOGGLE VIEW LOGIC ---
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('active');
+            document.querySelector('.sidebar-overlay').classList.toggle('active');
+        }
+
+        function toggleView(mode) {
+            const bizContent = document.querySelectorAll('.biz-view');
+            const techContent = document.querySelectorAll('.tech-view');
+            const btnBiz = document.getElementById('btn-biz');
+            const btnTech = document.getElementById('btn-tech');
+
+            if (mode === 'tech') {
+                bizContent.forEach(el => el.style.display = 'none');
+                techContent.forEach(el => el.style.display = 'block');
+                btnBiz.classList.remove('active');
+                btnTech.classList.add('active');
+            } else {
+                techContent.forEach(el => el.style.display = 'none');
+                bizContent.forEach(el => el.style.display = 'block');
+                btnTech.classList.remove('active');
+                btnBiz.classList.add('active');
+            }
+        }
+
+        // --- SIMPLIFIED FILTER LOGIC ---
+        // Simple rule: Click a filter to toggle it. Show projects that match ANY selected filter.
+        // If no filters are selected, show all projects.
+
+        let activeFilters = new Set();
+
+        function filterProjects(tag) {
+            // Toggle the filter
+            if (activeFilters.has(tag)) {
+                activeFilters.delete(tag);
+            } else {
+                activeFilters.add(tag);
+            }
+
+            // Update UI and apply filters
+            updateFilterUI();
+            applyFilters();
+        }
+
+        function toggleMobileFilter(tag) {
+            filterProjects(tag);
+        }
+
+        function updateFilterUI() {
+            // Update sidebar filter rows
+            document.querySelectorAll('.filter-row').forEach(row => {
+                const onclickAttr = row.getAttribute('onclick');
+                const tag = onclickAttr ? onclickAttr.match(/'([^']+)'/)?.[1] : null;
+                if (tag) {
+                    if (activeFilters.has(tag)) {
+                        row.classList.add('active');
+                    } else {
+                        row.classList.remove('active');
+                    }
+                }
+            });
+
+            // Update mobile filter buttons
+            document.querySelectorAll('.mobile-filter-btn').forEach(btn => {
+                const tag = btn.getAttribute('data-filter');
+                if (tag && activeFilters.has(tag)) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+
+        function applyFilters() {
+            const cards = document.querySelectorAll('.project-card');
+
+            if (activeFilters.size === 0) {
+                // No filters selected = show all projects
+                cards.forEach(card => {
+                    card.style.display = 'flex';
+                });
+            } else {
+                // Show projects that match ANY selected filter (OR logic - more intuitive)
+                cards.forEach(card => {
+                    const tags = card.getAttribute('data-tags');
+                    const matches = Array.from(activeFilters).some(filter => tags.includes(filter));
+                    card.style.display = matches ? 'flex' : 'none';
+                });
+            }
+        }
+
+        // Initialize: show all projects (no filters active by default)
+        updateFilterUI();
+        applyFilters();
+    </script>
+
+    <footer class="project-footer">
+        <p>© 2025 Data Portfolio | Built with precision and passion for data-driven insights</p>
+    </footer>
+
+</body>
+
+</html>
