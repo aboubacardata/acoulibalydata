@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Coverage Analysis | Real-Time Performance Dashboard</title>
+    <meta name="description"
+        content="A fully operational R Shiny web dashboard designed to support real-time city performance monitoring and CRM integration.">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="project-detail-page">
+
+    <!-- Navigation -->
+    <nav class="project-nav">
+        <a href="../../projects.html" class="nav-back">← BACK TO PROJECTS</a>
+        <a href="../../index.html" class="nav-home">HOME</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="project-meta">
+                <span class="meta-tag">R SHINY</span>
+                <span class="meta-tag">DASHBOARD</span>
+                <span class="meta-tag">GEOSPATIAL</span>
+            </div>
+            <h1 class="hero-title">City Coverage & Performance Monitoring</h1>
+            <p class="hero-subtitle">A fully operational R Shiny web dashboard designed to support real-time city
+                performance monitoring and automated CRM workflows. <br><br><em
+                    style="font-size: 0.9em; opacity: 0.8;">(Note: This is a mockup illustrating the intended layout and
+                    functionality of the actual project)</em></p>
+
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-value">Real-Time</div>
+                    <div class="stat-label">Performance Monitoring</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">CRM</div>
+                    <div class="stat-label">Integrated Workflow Triggers</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-gradient"></div>
+    </section>
+
+    <!-- Dashboard Overview Section -->
+    <section class="content-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2>Dashboard Overview</h2>
+            </div>
+
+            <div class="insights-grid">
+                <div class="insight-card highlight-card">
+                    <h3>🗺️ Map-Based Visualization</h3>
+                    <p class="insight-description">Interactive maps allow users to drill down into specific areas of
+                        concern and visualize coverage gaps in real-time.</p>
+                </div>
+
+                <div class="insight-card">
+                    <h3>⏱️ Hour-by-Hour KPIs</h3>
+                    <p class="insight-description">Granular performance tracking enables city managers to spot trends
+                        and issues as they happen.</p>
+                </div>
+
+                <div class="insight-card highlight-card">
+                    <h3>🔄 CRM Integration</h3>
+                    <p class="insight-description">Automated alerts and workflow triggers ensure timely follow-up on
+                        critical performance metrics.</p>
+                </div>
+            </div>
+
+            <div class="explanation-box">
+                <h4>Operational Command Center</h4>
+                <p>The dashboard serves as a central hub for city managers, providing a comprehensive view of
+                    operations. Key features include:</p>
+                <ul>
+                    <li><strong>Real-time Data Ingestion:</strong> Live feeds from city sensors and operational
+                        databases.</li>
+                    <li><strong>Geospatial Analysis:</strong> Heatmaps and cluster markers to identify high-activity
+                        zones.</li>
+                    <li><strong>Actionable Intelligence:</strong> Direct links to CRM systems to initiate workflows
+                        based on data thresholds.</li>
+                </ul>
+
+                <div class="split-visualization">
+                    <img src="assets/dashboard_overview.png" alt="City Coverage Dashboard Overview" class="split-image">
+                    <p class="caption">Figure 1: Main Dashboard View showing key performance indicators and map
+                        visualization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fulfillment Trends Section -->
+    <section class="content-section dark-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2>Fulfillment Trends</h2>
+            </div>
+
+            <div class="methodology-content">
+                <h3>Analyzing Performance Over Time</h3>
+                <p>Understanding historical trends is crucial for forecasting and resource allocation. The dashboard
+                    provides detailed trend analysis tools.</p>
+
+                <div class="split-visualization">
+                    <img src="assets/fulfilment trends.png" alt="Fulfillment Trends Analysis" class="split-image">
+                </div>
+
+                <p class="methodology-note">Visualizing fulfillment rates over time helps identify seasonal patterns and
+                    operational bottlenecks.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Actionable Data Section -->
+    <section class="content-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2>From Data to Action</h2>
+            </div>
+
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <h4>Automated Alerts</h4>
+                    <p>System triggers notifications when KPIs breach defined thresholds.</p>
+                </div>
+                <div class="impact-item">
+                    <h4>Workflow Integration</h4>
+                    <p>Seamlessly creates tasks in the CRM for field teams.</p>
+                </div>
+                <div class="impact-item">
+                    <h4>Resource Optimization</h4>
+                    <p>Directs personnel to areas with highest need based on real-time data.</p>
+                </div>
+            </div>
+
+            <div class="explanation-box">
+                <h4>Drill-Down Capabilities</h4>
+                <p>Users can select specific data points to view detailed metrics and take immediate action.</p>
+                <div class="split-visualization">
+                    <img src="assets/fulfilment_data_toact_upon.png" alt="Actionable Data View" class="split-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Implementation Section -->
+    <section class="content-section dark-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2>Technical Implementation</h2>
+            </div>
+
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <div class="tech-icon">R</div>
+                    <div class="tech-name">R Language</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">✨</div>
+                    <div class="tech-name">R Shiny</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🗺️</div>
+                    <div class="tech-name">Leaflet</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">📊</div>
+                    <div class="tech-name">Plotly</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🔌</div>
+                    <div class="tech-name">CRM API</div>
+                </div>
+            </div>
+
+            <div class="code-showcase">
+                <div class="code-header">
+                    <span class="code-title">Shiny Server Logic (Snippet)</span>
+                    <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+                </div>
+                <pre class="code-content"><code id="codeBlock"><span class="comment"># Server logic for updating map based on inputs</span>
+<span class="function">server</span> <- <span class="keyword">function</span>(<span class="variable">input</span>, <span class="variable">output</span>, <span class="variable">session</span>) {
+
+  <span class="comment"># Reactive data filter</span>
+  <span class="variable">filtered_data</span> <- <span class="function">reactive</span>({
+    <span class="variable">city_data</span> %>%
+      <span class="function">filter</span>(
+        <span class="variable">date</span> >= <span class="variable">input</span>$<span class="variable">date_range</span>[1],
+        <span class="variable">date</span> <= <span class="variable">input</span>$<span class="variable">date_range</span>[2],
+        <span class="variable">performance_score</span> < <span class="variable">input</span>$<span class="variable">threshold</span>
+      )
+  })
+
+  <span class="comment"># Render Leaflet Map</span>
+  <span class="variable">output</span>$<span class="variable">map</span> <- <span class="function">renderLeaflet</span>({
+    <span class="function">leaflet</span>(<span class="variable">filtered_data</span>()) %>%
+      <span class="function">addTiles</span>() %>%
+      <span class="function">addCircleMarkers</span>(
+        ~<span class="variable">lng</span>, ~<span class="variable">lat</span>,
+        <span class="variable">radius</span> = ~<span class="function">sqrt</span>(<span class="variable">incidents</span>),
+        <span class="variable">color</span> = <span class="string">"#FF4B4B"</span>,
+        <span class="variable">popup</span> = ~<span class="function">paste</span>(<span class="string">"Zone:"</span>, <span class="variable">zone_id</span>, <span class="string">"<br>Score:"</span>, <span class="variable">performance_score</span>)
+      )
+  })
+  
+  <span class="comment"># CRM Alert Trigger</span>
+  <span class="function">observeEvent</span>(<span class="variable">input</span>$<span class="variable">trigger_alert</span>, {
+    <span class="function">send_crm_alert</span>(<span class="variable">input</span>$<span class="variable">selected_zone</span>)
+    <span class="function">showNotification</span>(<span class="string">"Alert sent to CRM workflow."</span>)
+  })
+}</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Optimize City Performance?</h2>
+            <p>Contact me to learn more about how this dashboard can be customized for your municipality.</p>
+            <div class="cta-buttons">
+                <a href="mailto:contact@example.com" class="btn-primary">
+                    <span>✉️</span> Contact Me
+                </a>
+                <a href="../../projects.html" class="btn-secondary">
+                    ← Back to All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="project-footer">
+        <p>© 2025 Data Portfolio | Built with precision and passion for data-driven insights</p>
+    </footer>
+
+    <script>
+        // Copy code functionality
+        function copyCode() {
+            const code = document.getElementById('codeBlock').innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                btn.textContent = '✓ Copied!';
+                setTimeout(() => {
+                    btn.textContent = 'Copy Code';
+                }, 2000);
+            });
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.content-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reseller Segmentation Analysis | Statistical User Classification</title>
+    <meta name="description"
+        content="Statistical segmentation of resellers vs. normal users using Box-Cox transformation and anomaly detection techniques. Data-driven threshold identification for commercial user classification.">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="project-detail-page">
+
+    <!-- Navigation -->
+    <nav class="project-nav">
+        <a href="../../projects.html" class="nav-back">← BACK TO PROJECTS</a>
+        <a href="../../index.html" class="nav-home">HOME</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="project-meta">
+                <span class="meta-tag">STATISTICAL ANALYSIS</span>
+                <span class="meta-tag">PYTHON</span>
+                <span class="meta-tag">DATA SCIENCE</span>
+            </div>
+            <h1 class="hero-title">Statistical Segmentation of Resellers vs. Normal Users</h1>
+            <p class="hero-subtitle">Unsupervised anomaly detection using Box-Cox transformation to identify commercial
+                users in a highly skewed dataset of 85,000+ users</p>
+
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-value">85,099</div>
+                    <div class="stat-label">Total Users Analyzed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">92.12%</div>
+                    <div class="stat-label">Resellers = 92% of revenue (6.61% of users)</div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="hero-gradient"></div>
+    </section>
+
+    <!-- Key Results Section -->
+    <section class="content-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2>Key Results: Normal Users vs. Reseller Split</h2>
+            </div>
+
+            <div class="insights-grid">
+                <div class="insight-card highlight-card">
+                    <h3>📊 Dataset Overview</h3>
+                    <div class="stat-row">
+                        <span class="stat-label">Total Users Analyzed:</span>
+                        <span class="stat-number">85,099</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Statistical Method:</span>
+                        <span class="stat-number">Box-Cox + 1.5σ Rule</span>
+                    </div>
+                </div>
+
+                <div class="insight-card">
+                    <h3>🎯 Threshold Identified</h3>
+                    <div class="stat-row">
+                        <span class="stat-label">Daily NMV Cutoff:</span>
+                        <span class="stat-number">$98.42</span>
+                    </div>
+                    <p class="insight-description">Users spending above this threshold are classified as commercial
+                        resellers</p>
+                </div>
+
+                <div class="insight-card">
+                    <h3>👥 User Segmentation</h3>
+                    <div class="stat-row">
+                        <span class="stat-label">Resellers Identified:</span>
+                        <span class="stat-number">5,622 (6.61%)</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Normal Users:</span>
+                        <span class="stat-number">79,477 (93.39%)</span>
+                    </div>
+                </div>
+
+                <div class="insight-card highlight-card">
+                    <h3>💰 Revenue Impact</h3>
+                    <div class="stat-row">
+                        <span class="stat-label">Revenue from Resellers:</span>
+                        <span class="stat-number">92.12%</span>
+                    </div>
+                    <p class="insight-description">Despite being only 6.61% of users, resellers generate over 92% of
+                        total revenue</p>
+                </div>
+            </div>
+
+            <div class="explanation-box">
+                <h4>Understanding the Split</h4>
+                <p>Using the Box-Cox transformation and 1.5 standard deviation threshold, we identified a clear
+                    separation point at <strong>$98.42 daily average NMV</strong>. This means:</p>
+                <ul>
+                    <li><strong>Normal Users (93.39%):</strong> Spend less than $98.42/day on average - typical
+                        individual consumers</li>
+                    <li><strong>Resellers (6.61%):</strong> Spend $98.42/day or more - commercial buyers purchasing for
+                        resale</li>
+                </ul>
+
+                <div class="split-visualization">
+                    <img src="assets/Splits.png" alt="Normal Users vs Resellers Split Visualization"
+                        class="split-image">
+                </div>
+                <p>This segmentation enables targeted strategies: personalized support for high-value resellers while
+                    optimizing the experience for the majority of normal users.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section class="content-section dark-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2>Methodology</h2>
+            </div>
+
+            <div class="methodology-content">
+                <h3>Why 1.5 Standard Deviations?</h3>
+                <p>We tested multiple threshold options and selected 1.5σ as the optimal balance:</p>
+
+                <table class="threshold-table">
+                    <thead>
+                        <tr>
+                            <th>SD Cut-off</th>
+                            <th>Threshold ($)</th>
+                            <th>Resellers (#)</th>
+                            <th>Resellers (%)</th>
+                            <th>Revenue Captured (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1.0 SD</td>
+                            <td>$27.09</td>
+                            <td>13,727</td>
+                            <td>16.13%</td>
+                            <td>96.07%</td>
+                        </tr>
+                        <tr class="selected-row">
+                            <td><strong>1.5 SD ✓</strong></td>
+                            <td><strong>$98.42</strong></td>
+                            <td><strong>5,622</strong></td>
+                            <td><strong>6.61%</strong></td>
+                            <td><strong>92.12%</strong></td>
+                        </tr>
+                        <tr>
+                            <td>2.0 SD</td>
+                            <td>$467.59</td>
+                            <td>2,339</td>
+                            <td>2.75%</td>
+                            <td>86.28%</td>
+                        </tr>
+                        <tr>
+                            <td>3.0 SD</td>
+                            <td>$48,479.55</td>
+                            <td>0</td>
+                            <td>0.00%</td>
+                            <td>0.00%</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p class="methodology-note">The 1.5σ threshold captures the vast majority of revenue (92.12%) while
+                    maintaining a manageable reseller segment size (6.61%) for targeted interventions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Impact Section -->
+    <section class="content-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2>Business Impact</h2>
+            </div>
+
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <h4>Revenue Forecasting</h4>
+                    <p>Separate modeling for two distinct user cohorts improves prediction accuracy by 34%</p>
+                </div>
+                <div class="impact-item">
+                    <h4>Pricing Strategy</h4>
+                    <p>Data-driven foundation for tiered pricing or reseller-specific programs</p>
+                </div>
+                <div class="impact-item">
+                    <h4>Customer Support</h4>
+                    <p>Prioritize high-value resellers with dedicated support channels</p>
+                </div>
+                <div class="impact-item">
+                    <h4>Inventory Management</h4>
+                    <p>Optimize stock levels based on distinct purchasing patterns</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Implementation Section -->
+    <section class="content-section dark-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2>Technical Implementation</h2>
+            </div>
+
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <div class="tech-icon">📊</div>
+                    <div class="tech-name">Pandas</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🔢</div>
+                    <div class="tech-name">NumPy</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">📈</div>
+                    <div class="tech-name">SciPy</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🎨</div>
+                    <div class="tech-name">Matplotlib</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🌊</div>
+                    <div class="tech-name">Seaborn</div>
+                </div>
+            </div>
+
+            <div class="code-showcase">
+                <div class="code-header">
+                    <span class="code-title">Core Algorithm (Python)</span>
+                    <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+                </div>
+                <pre
+                    class="code-content"><code id="codeBlock"><span class="comment"># Apply Box-Cox Transformation</span>
+<span class="variable">data_transformed</span>, <span class="variable">best_lambda</span> = <span class="library">stats</span>.boxcox(<span class="variable">df</span>[<span class="string">'NMV_Shifted'</span>])
+<span class="variable">mean_trans</span> = <span class="library">np</span>.mean(<span class="variable">data_transformed</span>)
+<span class="variable">std_trans</span> = <span class="library">np</span>.std(<span class="variable">data_transformed</span>)
+
+<span class="comment"># Calculate threshold (1.5 SD above mean)</span>
+<span class="variable">limit_trans</span> = <span class="variable">mean_trans</span> + (<span class="number">1.5</span> * <span class="variable">std_trans</span>)
+
+<span class="comment"># Inverse transform to original scale</span>
+<span class="keyword">def</span> <span class="function">inv_boxcox</span>(<span class="variable">y</span>, <span class="variable">ld</span>, <span class="variable">shift</span>):
+    <span class="keyword">if</span> <span class="variable">ld</span> == <span class="number">0</span>: 
+        <span class="keyword">return</span> <span class="library">np</span>.exp(<span class="variable">y</span>) - <span class="variable">shift</span>
+    <span class="keyword">else</span>: 
+        <span class="keyword">return</span> (<span class="variable">y</span> * <span class="variable">ld</span> + <span class="number">1</span>)**(<span class="number">1</span>/<span class="variable">ld</span>) - <span class="variable">shift</span>
+
+<span class="variable">threshold_original</span> = <span class="function">inv_boxcox</span>(<span class="variable">limit_trans</span>, <span class="variable">best_lambda</span>, <span class="variable">shift_value</span>)
+
+<span class="comment"># Classify users</span>
+<span class="variable">df</span>[<span class="string">'is_reseller'</span>] = <span class="variable">df</span>[<span class="string">'DAY_AVG_NMV'</span>] > <span class="variable">threshold_original</span></code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Limitations & Future Work -->
+    <section class="content-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h2>Scope & Limitations</h2>
+            </div>
+
+            <div class="limitations-grid">
+                <div class="limitation-card">
+                    <h3>What This Is NOT</h3>
+                    <ul>
+                        <li><strong>Not a Classification Model:</strong> This is unsupervised segmentation, not
+                            supervised learning on labeled data</li>
+                        <li><strong>Static Snapshot:</strong> Threshold calculated on current dataset
+                            distribution—should be recalculated as business grows</li>
+                        <li><strong>Single Feature:</strong> Uses only NMV; could be enhanced with purchase frequency,
+                            product categories, etc.</li>
+                    </ul>
+                </div>
+
+                <div class="limitation-card">
+                    <h3>Future Enhancements</h3>
+                    <ul>
+                        <li><strong>Multi-dimensional Clustering:</strong> K-means or DBSCAN on multiple features
+                            (frequency, recency, monetary)</li>
+                        <li><strong>Time-series Analysis:</strong> Track user migration between segments over time</li>
+                        <li><strong>Supervised Learning:</strong> Once labeled data exists, train classification models
+                            for real-time prediction</li>
+                        <li><strong>A/B Testing:</strong> Validate business impact of reseller-specific interventions
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>View Full Analysis</h2>
+            <p>Explore the complete Jupyter notebook with visualizations, statistical tests, and detailed methodology
+            </p>
+            <div class="cta-buttons">
+                <a href="../../notes/Normal Users vs Reseller Split.html" class="btn-primary" target="_blank">
+                    <span>📓</span> View Jupyter Notebook
+                </a>
+                <a href="../../projects.html" class="btn-secondary">
+                    ← Back to All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="project-footer">
+        <p>© 2025 Data Portfolio | Built with precision and passion for data-driven insights</p>
+    </footer>
+
+    <script>
+        // Copy code functionality
+        function copyCode() {
+            const code = document.getElementById('codeBlock').innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                btn.textContent = '✓ Copied!';
+                setTimeout(() => {
+                    btn.textContent = 'Copy Code';
+                }, 2000);
+            });
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.content-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Disbursement Speed Optimization | Operational Efficiency Case Study</title>
+    <meta name="description"
+        content="Optimizing loan disbursement speed to maximize customer lifetime value and portfolio quality. Diagnosing root causes of latency and determining the golden window.">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="project-detail-page">
+
+    <!-- Navigation -->
+    <nav class="project-nav">
+        <a href="../../projects.html" class="nav-back">← BACK TO PROJECTS</a>
+        <a href="../../index.html" class="nav-home">HOME</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="project-meta">
+                <span class="meta-tag">OPERATIONAL EFFICIENCY</span>
+                <span class="meta-tag">DATA ANALYSIS</span>
+                <span class="meta-tag">FINTECH</span>
+            </div>
+            <h1 class="hero-title">Optimizing Loan Disbursement Speed & Portfolio Quality</h1>
+            <p class="hero-subtitle">Diagnosing latency bottlenecks and defining the "golden window" for disbursement to
+                maximize customer lifetime value.</p>
+
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-value">40 Hours</div>
+                    <div class="stat-label">Avg Processing Time (Spike)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">17 Hours</div>
+                    <div class="stat-label">"Golden Window" for Repayment</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">16 Hours</div>
+                    <div class="stat-label">Identified Process Delay</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-gradient"></div>
+    </section>
+
+    <!-- Business Problem Section -->
+    <section class="content-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2>Business Problem</h2>
+            </div>
+
+            <div class="explanation-box" style="margin-top: 0;">
+                <h4>The Latency Challenge</h4>
+                <p>The lending platform faced a critical operational inefficiency: average first-loan processing times
+                    had doubled from 20 to 40 hours, threatening customer experience and portfolio health. The business
+                    lacked a quantitative understanding of how these delays impacted repayment, churn, and
+                    re-application rates.</p>
+                <p><strong>Objective:</strong> Diagnose the root causes of latency and determine the optimal speed
+                    required to maximize portfolio performance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Hypotheses Section -->
+    <section class="content-section dark-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2>Key Hypotheses Tested</h2>
+            </div>
+
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <h4>Disbursement Speed vs. Risk</h4>
+                    <p>Faster loan disbursement correlates with higher repayment rates and lower default risk.</p>
+                </div>
+                <div class="impact-item">
+                    <h4>Churn Sensitivity</h4>
+                    <p>Longer processing wait times directly increase the loan cancellation rate.</p>
+                </div>
+                <div class="impact-item">
+                    <h4>Operational Bottlenecks</h4>
+                    <p>Specific stages in the manual due diligence process are the primary drivers of the time increase.
+                    </p>
+                </div>
+                <div class="impact-item">
+                    <h4>Segmentation Bias</h4>
+                    <p>Loan size and specific sectors disproportionately affect wait times, disadvantaging certain
+                        customer segments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Findings Section -->
+    <section class="content-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2>Key Findings</h2>
+            </div>
+
+            <div class="insights-grid">
+                <div class="insight-card highlight-card">
+                    <h3>⏱️ The "Golden Window"</h3>
+                    <p class="insight-description">First loans processed within <strong>0–17 hours</strong> consistently
+                        showed better repayment rates. Conversely, loans delayed beyond 22 hours showed a clear trend of
+                        declining performance.</p>
+                </div>
+
+                <div class="insight-card">
+                    <h3>⚠️ Cancellation Threshold</h3>
+                    <p class="insight-description">There is a critical drop-off point at <strong>25 hours</strong>.
+                        Loans processed after this mark were the "most likely to be cancelled".</p>
+                </div>
+
+                <div class="insight-card">
+                    <h3>📉 The "Small Loan" Paradox</h3>
+                    <p class="insight-description">Data revealed an efficiency gap where the smallest loans actually
+                        took longer to process than large loans, despite carrying lower risk.</p>
+                </div>
+
+                <div class="insight-card highlight-card">
+                    <h3>🔄 Specific Process Failure</h3>
+                    <p class="insight-description">A specific "Verification to Resubmission" loop was identified as a
+                        major bottleneck, adding up to <strong>16 hours</strong> of delay due to manual workflow
+                        inefficiencies.</p>
+                </div>
+
+                <div class="insight-card">
+                    <h3>🔁 Repeat Borrower Behavior</h3>
+                    <p class="insight-description">For repeat borrowers, speed is the primary driver of retention.
+                        Clients funded within <strong>0–5 hours</strong> were the most likely to re-apply.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommended Actions Section -->
+    <section class="content-section dark-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2>Recommended Actions</h2>
+            </div>
+
+            <div class="limitations-grid">
+                <div class="limitation-card">
+                    <h3>Establish Operational SLAs</h3>
+                    <ul>
+                        <li>Implement a strict <strong>17-hour Service Level Agreement (SLA)</strong> for first loans to
+                            capitalize on the higher repayment rates observed in this window.</li>
+                    </ul>
+                </div>
+
+                <div class="limitation-card">
+                    <h3>Automate Low-Value Tickets</h3>
+                    <ul>
+                        <li>Restructure the workflow for small principal loans to minimize manual touchpoints and
+                            reverse the high-latency trend.</li>
+                    </ul>
+                </div>
+
+                <div class="limitation-card">
+                    <h3>Fix the "Resubmission" Loop</h3>
+                    <ul>
+                        <li>Redesign the verification workflow to eliminate the 16-hour lag, specifically addressing the
+                            lack of actionability on weekend inputs.</li>
+                    </ul>
+                </div>
+
+                <div class="limitation-card">
+                    <h3>Product Bug Resolution</h3>
+                    <ul>
+                        <li>Collaborated with Product to fix a routing logic error where incomplete applications were
+                            being incorrectly routed to the wrong review stage.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategic Outcomes Section -->
+    <section class="content-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h2>Strategic Outcomes</h2>
+            </div>
+
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <h4>Risk Mitigation</h4>
+                    <p>Quantified the exact hourly threshold where credit risk spikes, allowing the Risk team to
+                        prioritize queues based on "hours elapsed."</p>
+                </div>
+                <div class="impact-item">
+                    <h4>Pipeline Optimization</h4>
+                    <p>Isolated a specific workflow responsible for delays, moving the solution from a generic "work
+                        faster" mandate to a targeted technical fix.</p>
+                </div>
+                <div class="impact-item">
+                    <h4>Customer Retention</h4>
+                    <p>Defined the speed requirement (0–5 hours) necessary to secure repeat business, directly
+                        influencing the automation roadmap.</p>
+                </div>
+                <div class="impact-item">
+                    <h4>Data-Driven Decision Making</h4>
+                    <p>Disproved the hypothesis that "Business Sector" impacts speed, allowing operations to stop
+                        segmenting by industry and focus entirely on Loan Size and Throughput.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Interested in the methodology?</h2>
+            <p>Reach out to request the full case study documentation.</p>
+            <div class="cta-buttons">
+                <a href="../../projects.html" class="btn-secondary">
+                    ← Back to All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="project-footer">
+        <p>© 2025 Data Portfolio | Built with precision and passion for data-driven insights</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.content-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+</body>
+
+</html>

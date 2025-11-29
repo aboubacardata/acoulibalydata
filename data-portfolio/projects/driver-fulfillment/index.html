@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Fulfillment Hotspot Mapping | Tableau Geospatial Analytics</title>
+    <meta name="description"
+        content="Interactive Tableau dashboard visualizing driver fulfillment across Nairobi using custom geocoding and spatial mapping to detect supply-demand gaps.">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="project-detail-page">
+
+    <!-- Navigation -->
+    <nav class="project-nav">
+        <a href="../../projects.html" class="nav-back">← BACK TO PROJECTS</a>
+        <a href="../../index.html" class="nav-home">HOME</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="project-meta">
+                <span class="meta-tag">TABLEAU</span>
+                <span class="meta-tag">GEOSPATIAL ANALYTICS</span>
+                <span class="meta-tag">OPERATIONS</span>
+            </div>
+            <h1 class="hero-title">Driver Fulfillment Hotspot Mapping</h1>
+            <p class="hero-subtitle">I built an interactive Tableau dashboard that visualizes driver fulfillment across
+                Nairobi using custom geocoding and spatial mapping. The tool combines geographic hotspots with a 24-hour
+                fulfillment heat grid, helping operations teams quickly detect where and when supply–demand gaps occur.
+            </p>
+
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-value">24-Hour</div>
+                    <div class="stat-label">Fulfillment Heat Grid</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">City-Level</div>
+                    <div class="stat-label">Spatial View</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-gradient"></div>
+    </section>
+
+    <!-- Key Insights Section (Matches Baseline 'Key Results') -->
+    <section class="content-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2>Key Insights Generated</h2>
+            </div>
+
+            <div class="insights-grid">
+                <div class="insight-card highlight-card">
+                    <h3>📉 Kajiado Region</h3>
+                    <p class="insight-description">Consistently shows lowest fulfillment during evenings, indicating a
+                        <strong>structural shortage</strong> of drivers.
+                    </p>
+                </div>
+
+                <div class="insight-card">
+                    <h3>🏙️ Eastleigh</h3>
+                    <p class="insight-description">Experiences <strong>late-morning spikes</strong> with intermittent
+                        driver coverage gaps.</p>
+                </div>
+
+                <div class="insight-card">
+                    <h3>⚡ CBD Flash Surges</h3>
+                    <p class="insight-description">Shows short red blocks scattered across multiple hours, indicating
+                        <strong>flash demand surges</strong>.
+                    </p>
+                </div>
+
+                <div class="insight-card highlight-card">
+                    <h3>🕰️ Temporal Variance</h3>
+                    <p class="insight-description">Fulfillment challenges differ significantly by <strong>time-of-day +
+                            neighborhood</strong>, not just overall volume.</p>
+                </div>
+            </div>
+
+            <!-- The Problem & Image (Matches Baseline 'Explanation Box') -->
+            <div class="explanation-box">
+                <h4>The Problem</h4>
+                <p>Driver availability varied widely across neighborhoods, leading to significant operational
+                    inefficiencies. The business needed a city-level, time-specific view of where fulfillment was
+                    failing.</p>
+                <ul>
+                    <li><strong>Unpredictable wait times</strong> for customers in specific zones.</li>
+                    <li><strong>Missed or delayed trips</strong> due to lack of driver coverage.</li>
+                    <li><strong>Inefficient driver allocation</strong> resulting in idle drivers in low-demand areas.
+                    </li>
+                    <li><strong>Localized demand surges</strong> that weren’t visible in standard aggregate reports.
+                    </li>
+                </ul>
+
+                <div class="split-visualization">
+                    <img src="assets/heatmap.png" alt="Driver Fulfillment Heatmap" class="split-image">
+                </div>
+                <p>The dashboard above visualizes these gaps, enabling teams to monitor performance in real time and
+                    adjust quickly.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Approach Section (Matches Baseline 'Methodology') -->
+    <section class="content-section dark-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2>My Approach in Tableau</h2>
+            </div>
+
+            <div class="insights-grid">
+                <div class="insight-card">
+                    <h3>1. Custom Geocoding & Spatial Setup</h3>
+                    <p class="insight-description">Imported latitude/longitude and administrative boundaries. Created
+                        custom geocoded regions for neighborhoods not supported natively and built polygon maps to
+                        accurately reflect real Nairobi geography.</p>
+                </div>
+
+                <div class="insight-card">
+                    <h3>2. Hotspot Mapping (Choropleth)</h3>
+                    <p class="insight-description">Colored each zone by fulfillment rate (Green = strong supply, Yellow
+                        = moderate, Red = low). Enabled hover interactions showing hourly patterns and KPIs.</p>
+                </div>
+
+                <div class="insight-card">
+                    <h3>3. Hour-by-Hour Heat Grid</h3>
+                    <p class="insight-description">Built a 24-hour timeline heatmap for every region, allowing quick
+                        scanning of peak failure times (e.g., 7–9 AM, 5–8 PM) using color encoding.</p>
+                </div>
+
+                <div class="insight-card">
+                    <h3>4. Dashboard Interactivity</h3>
+                    <p class="insight-description">Implemented region selection to filter heatmaps, tooltips with
+                        fulfillment %, demand, and driver count, and linked spatial and temporal views.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Impact Section -->
+    <section class="content-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2>Business Impact</h2>
+            </div>
+
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <h4>Efficient Deployment</h4>
+                    <p>Deploy drivers more efficiently during red-zone hours based on historical data.</p>
+                </div>
+                <div class="impact-item">
+                    <h4>Incentive Allocation</h4>
+                    <p>Allocate incentives where fulfillment is historically weakest to boost supply.</p>
+                </div>
+                <div class="impact-item">
+                    <h4>Customer Experience</h4>
+                    <p>Reduce customer wait times in highest-risk areas by preemptively positioning drivers.</p>
+                </div>
+                <div class="impact-item">
+                    <h4>Real-time Monitoring</h4>
+                    <p>Monitor performance in real time and adjust operations quickly to changing conditions.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; text-align: center;">
+                <p style="color: var(--color-text-secondary); font-size: 1.1rem;"><em>It now serves as a daily
+                        operations tool for city managers and driver supply teams.</em></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Used Section -->
+    <section class="content-section dark-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2>Tools Used</h2>
+            </div>
+
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <div class="tech-icon">📊</div>
+                    <div class="tech-name">Tableau</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🗺️</div>
+                    <div class="tech-name">Custom Geocoding</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">📍</div>
+                    <div class="tech-name">Shapefiles</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">📑</div>
+                    <div class="tech-name">Excel/CSV Preprocessing</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Explore More Projects</h2>
+            <p>See how data analytics drives operational efficiency and business growth.</p>
+            <div class="cta-buttons">
+                <a href="../../projects.html" class="btn-secondary">
+                    ← Back to All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="project-footer">
+        <p>© 2025 Data Portfolio | Built with precision and passion for data-driven insights</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.content-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revenue Density & 6-Tier Segmentation | Advanced Customer Segmentation</title>
+    <meta name="description"
+        content="Advanced customer segmentation using log-scale analysis and revenue density to identify 6 distinct tiers. Discover how 1.5% of users drive 81% of revenue.">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="project-detail-page">
+
+    <!-- Navigation -->
+    <nav class="project-nav">
+        <a href="../../projects.html" class="nav-back">← BACK TO PROJECTS</a>
+        <a href="../../index.html" class="nav-home">HOME</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="project-meta">
+                <span class="meta-tag">DATA ANALYSIS</span>
+                <span class="meta-tag">PYTHON</span>
+                <span class="meta-tag">SEGMENTATION</span>
+            </div>
+            <h1 class="hero-title">Revenue Density & 6-Tier Segmentation</h1>
+            <p class="hero-subtitle">Identifying the "Mega Whales" driving 81% of revenue through advanced
+                segmentation and log-scale distribution analysis</p>
+
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-value">85,099</div>
+                    <div class="stat-label">Total Users Analyzed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">81%</div>
+                    <div class="stat-label">Top 1.5% (Platinum) = 81% of revenue</div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="hero-gradient"></div>
+    </section>
+
+    <!-- Key Results Section -->
+    <section class="content-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2>Key Results: 6-Tier Customer Segmentation</h2>
+            </div>
+
+            <div class="insights-grid">
+                <div class="insight-card highlight-card">
+                    <h3>📊 Dataset Overview</h3>
+                    <div class="stat-row">
+                        <span class="stat-label">Total Users Analyzed:</span>
+                        <span class="stat-number">85,099</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Segmentation Method:</span>
+                        <span class="stat-number">Log-Scale + Revenue Density</span>
+                    </div>
+                </div>
+
+                <div class="insight-card">
+                    <h3>🎯 Distribution Analysis</h3>
+                    <div class="stat-row">
+                        <span class="stat-label">Skewness Score:</span>
+                        <span class="stat-number">25.33 (Extreme)</span>
+                    </div>
+                    <p class="insight-description">Extreme skewness reveals that standard averages fail to capture the
+                        true customer value distribution</p>
+                </div>
+
+                <div class="insight-card">
+                    <h3>👥 Tier Structure</h3>
+                    <div class="stat-row">
+                        <span class="stat-label">Tiers Identified:</span>
+                        <span class="stat-number">6 Distinct Levels</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Top Tier (Platinum):</span>
+                        <span class="stat-number">1.5% of users</span>
+                    </div>
+                </div>
+
+                <div class="insight-card highlight-card">
+                    <h3>💰 Revenue Impact</h3>
+                    <div class="stat-row">
+                        <span class="stat-label">Revenue from Platinum:</span>
+                        <span class="stat-number">81%</span>
+                    </div>
+                    <p class="insight-description">The top 1.5% of users drive over 81% of total revenue - a "Pareto
+                        Principle on steroids"</p>
+                </div>
+            </div>
+
+            <div class="explanation-box">
+                <h4>Understanding the Segmentation</h4>
+                <p>Standard averages fail when data is extremely skewed. With a skewness score of
+                    <strong>25.33</strong>, using simple averages would suggest a typical user spend that doesn't
+                    reflect reality for the vast majority of customers, nor does it capture the immense value of the top
+                    performers.
+                </p>
+                <ul>
+                    <li><strong>Platinum (Mega Whales, 1.5%):</strong> The highest revenue drivers requiring white-glove
+                        VIP support</li>
+                    <li><strong>Gold & Silver (Middle Tiers):</strong> Targets for upsell campaigns to move them into
+                        higher value segments</li>
+                    <li><strong>Starter & Copper (Base Tiers):</strong> Best served by automated onboarding and
+                        self-service tools</li>
+                </ul>
+
+                <div class="split-visualization">
+                    <img src="segmentation split.png" alt="6-Tier Segmentation Split Visualization" class="split-image">
+                </div>
+
+                <h4>Revenue Distribution by Tier</h4>
+                <p>The revenue concentration becomes even more striking when we examine the total revenue contribution
+                    per tier:</p>
+
+                <div class="split-visualization">
+                    <img src="Revenue by Tier.png" alt="Revenue by Tier - Showing 81% from Platinum"
+                        class="split-image">
+                </div>
+
+                <p>This segmentation enables targeted strategies: personalized support for high-value Platinum users
+                    while optimizing cost-to-serve for lower tiers.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section class="content-section dark-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2>Methodology</h2>
+            </div>
+
+            <div class="methodology-content">
+                <h3>The Challenge: Extreme Skewness</h3>
+                <p>Initial diagnosis revealed an extreme skewness score of 25.33. On a linear scale, 99% of users
+                    appeared compressed against the axis, hiding the "Whale Zone" where the bulk of revenue actually
+                    sits.</p>
+
+            </div>
+
+            <h3>Segmentation Approach</h3>
+            <ul>
+                <li><strong>Data Cleaning:</strong> Processed 85,099 raw user records, removing invalid entries
+                    (zero/negative spend)</li>
+                <li><strong>Distribution Analysis:</strong> Used log-scale visualization to uncover the hidden
+                    structure of user spend</li>
+                <li><strong>Revenue Density Analysis:</strong> Weighted histogram showing where the money actually
+                    is</li>
+                <li><strong>Tier Identification:</strong> Grouped users into 6 distinct tiers based on Net
+                    Merchandise Value (NMV)</li>
+                <li><strong>Validation:</strong> Confirmed the "Pareto Principle on steroids" - 1.5% driving 81% of
+                    value</li>
+            </ul>
+        </div>
+        </div>
+    </section>
+
+    <!-- Business Impact Section -->
+    <section class="content-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2>Business Impact</h2>
+            </div>
+
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <h4>VIP Customer Support</h4>
+                    <p>Platinum tier receives white-glove treatment with dedicated account managers - losing even one
+                        Mega Whale is costly</p>
+                </div>
+                <div class="impact-item">
+                    <h4>Targeted Upsell Campaigns</h4>
+                    <p>Middle tiers (Gold, Silver, Bronze) are prime candidates for growth campaigns to move into higher
+                        value segments</p>
+                </div>
+                <div class="impact-item">
+                    <h4>Cost Optimization</h4>
+                    <p>Starter and Copper tiers best served by automated onboarding and self-service tools to manage
+                        costs efficiently</p>
+                </div>
+                <div class="impact-item">
+                    <h4>Revenue Forecasting</h4>
+                    <p>Tier-based modeling improves prediction accuracy by segmenting distinct behavioral patterns</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Implementation Section -->
+    <section class="content-section dark-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2>Technical Implementation</h2>
+            </div>
+
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <div class="tech-icon">📊</div>
+                    <div class="tech-name">Pandas</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🔢</div>
+                    <div class="tech-name">NumPy</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">📈</div>
+                    <div class="tech-name">SciPy</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🎨</div>
+                    <div class="tech-name">Matplotlib</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🌊</div>
+                    <div class="tech-name">Seaborn</div>
+                </div>
+            </div>
+
+            <div class="code-showcase">
+                <div class="code-header">
+                    <span class="code-title">Core Algorithm (Python)</span>
+                    <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+                </div>
+                <pre
+                    class="code-content"><code id="codeBlock"><span class="comment"># Log-scale transformation for skewed data</span>
+<span class="keyword">import</span> <span class="library">numpy</span> <span class="keyword">as</span> <span class="variable">np</span>
+<span class="keyword">import</span> <span class="library">pandas</span> <span class="keyword">as</span> <span class="variable">pd</span>
+
+<span class="comment"># Calculate skewness</span>
+<span class="variable">skewness</span> = <span class="variable">df</span>[<span class="string">'DAY_AVG_NMV'</span>].<span class="function">skew</span>()
+<span class="function">print</span>(<span class="string">f"Skewness: </span>{<span class="variable">skewness</span>:.2f}<span class="string">"</span>)  <span class="comment"># 25.33</span>
+
+<span class="comment"># Apply log transformation</span>
+<span class="variable">df</span>[<span class="string">'log_nmv'</span>] = <span class="library">np</span>.<span class="function">log10</span>(<span class="variable">df</span>[<span class="string">'DAY_AVG_NMV'</span>] + <span class="number">1</span>)
+
+<span class="comment"># Define tier boundaries based on log-scale analysis</span>
+<span class="variable">tier_boundaries</span> = {
+    <span class="string">'Starter'</span>: (<span class="number">0</span>, <span class="number">10</span>),
+    <span class="string">'Copper'</span>: (<span class="number">10</span>, <span class="number">25</span>),
+    <span class="string">'Bronze'</span>: (<span class="number">25</span>, <span class="number">50</span>),
+    <span class="string">'Silver'</span>: (<span class="number">50</span>, <span class="number">100</span>),
+    <span class="string">'Gold'</span>: (<span class="number">100</span>, <span class="number">250</span>),
+    <span class="string">'Platinum'</span>: (<span class="number">250</span>, <span class="library">np</span>.<span class="variable">inf</span>)
+}
+
+<span class="comment"># Assign tiers to users</span>
+<span class="keyword">def</span> <span class="function">assign_tier</span>(<span class="variable">nmv</span>):
+    <span class="keyword">for</span> <span class="variable">tier</span>, (<span class="variable">low</span>, <span class="variable">high</span>) <span class="keyword">in</span> <span class="variable">tier_boundaries</span>.<span class="function">items</span>():
+        <span class="keyword">if</span> <span class="variable">low</span> <= <span class="variable">nmv</span> < <span class="variable">high</span>:
+            <span class="keyword">return</span> <span class="variable">tier</span>
+
+<span class="variable">df</span>[<span class="string">'tier'</span>] = <span class="variable">df</span>[<span class="string">'DAY_AVG_NMV'</span>].<span class="function">apply</span>(<span class="variable">assign_tier</span>)</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Limitations & Future Work -->
+    <section class="content-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h2>Scope & Limitations</h2>
+            </div>
+
+            <div class="limitations-grid">
+                <div class="limitation-card">
+                    <h3>What This Is NOT</h3>
+                    <ul>
+                        <li><strong>Not Predictive:</strong> This is descriptive segmentation based on historical data,
+                            not a predictive model</li>
+                        <li><strong>Static Snapshot:</strong> Tier boundaries should be recalculated as the business
+                            grows and customer behavior evolves</li>
+                        <li><strong>Single Feature:</strong> Uses only NMV; could be enhanced with purchase frequency,
+                            product categories, customer tenure, etc.</li>
+                    </ul>
+                </div>
+
+                <div class="limitation-card">
+                    <h3>Future Enhancements</h3>
+                    <ul>
+                        <li><strong>Multi-dimensional Clustering:</strong> K-means or DBSCAN on multiple features
+                            (frequency, recency, monetary)</li>
+                        <li><strong>Time-series Analysis:</strong> Track user migration between tiers over time to
+                            identify growth patterns</li>
+                        <li><strong>Predictive Modeling:</strong> Build models to predict which users are likely to move
+                            up or down tiers</li>
+                        <li><strong>A/B Testing:</strong> Validate business impact of tier-specific interventions and
+                            measure ROI</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>View Full Analysis</h2>
+            <p>Explore the complete Jupyter notebook with visualizations, statistical analysis, and detailed methodology
+            </p>
+            <div class="cta-buttons">
+                <a href="../../notes/Segmentation Analysis.html" class="btn-primary" target="_blank">
+                    <span>📓</span> View Jupyter Notebook
+                </a>
+                <a href="../../projects.html" class="btn-secondary">
+                    ← Back to All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="project-footer">
+        <p>© 2025 Data Portfolio | Built with precision and passion for data-driven insights</p>
+    </footer>
+
+    <script>
+        // Copy code functionality
+        function copyCode() {
+            const code = document.getElementById('codeBlock').innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                btn.textContent = '✓ Copied!';
+                setTimeout(() => {
+                    btn.textContent = 'Copy Code';
+                }, 2000);
+            });
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.content-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+</body>
+
+</html>

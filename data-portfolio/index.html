@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Portfolio | Executive Summary</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="page-home">
+
+    <nav>
+        <div class="logo">DATA_PORTFOLIO</div>
+        <div class="nav-links">
+            <a class="nav-link nav-link--active" href="#">Home</a>
+            <a class="nav-link" href="projects.html">Projects</a>
+            <a class="nav-link" href="blogs.html">Lab Notes</a>
+            <a class="nav-link" href="resume.html">Resume</a>
+        </div>
+    </nav>
+
+    <header class="hero-container">
+
+        <div class="network-container">
+
+            <svg class="connections" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet">
+                <line x1="400" y1="300" x2="200" y2="150" class="connection-line" />
+                <line x1="400" y1="300" x2="150" y2="280" class="connection-line" />
+                <line x1="400" y1="300" x2="600" y2="150" class="connection-line" />
+                <line x1="400" y1="300" x2="680" y2="280" class="connection-line" />
+                <line x1="400" y1="300" x2="250" y2="480" class="connection-line" />
+                <line x1="400" y1="300" x2="400" y2="520" class="connection-line" />
+                <line x1="400" y1="300" x2="550" y2="480" class="connection-line" />
+            </svg>
+
+            <div class="node hub" onclick="toggleTooltip()">
+                <h1>Aboubacar Coulibaly</h1>
+                <p>Senior Data Analyst</p>
+                <div class="contact-btn">Contact Me</div>
+
+                <div class="profile-tooltip" id="tooltip" onclick="event.stopPropagation()">
+                    <div class="tooltip-header">
+                        <strong>Let's Connect</strong>
+                        <span class="close-btn" onclick="event.stopPropagation(); toggleTooltip()">×</span>
+                    </div>
+                    <div class="tooltip-body">
+                        <p><i class="fa-solid fa-envelope"></i> <a
+                                href="mailto:coulibaly_abubakar@hotmail.com">coulibaly_abubakar@hotmail.com</a></p>
+                        <p><i class="fa-brands fa-linkedin"></i> <a
+                                href="https://www.linkedin.com/in/aboubacar-c-5b131586/" target="_blank">LinkedIn
+                                Profile</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="node tech pos-1">
+                <i class="fa-solid fa-code"></i>
+                <div>
+                    <h3>Python, SQL, R</h3>
+                    <span>Advanced Scripting</span>
+                </div>
+            </div>
+
+            <div class="node tech pos-2">
+                <i class="fa-solid fa-server"></i>
+                <div>
+                    <h3>Data Warehousing</h3>
+                    <span>ETL & Pipelines</span>
+                </div>
+            </div>
+
+            <div class="node viz pos-3">
+                <i class="fa-solid fa-chart-simple"></i>
+                <div>
+                    <h3>PowerBI & Tableau</h3>
+                    <span>Dashboarding</span>
+                </div>
+            </div>
+
+            <div class="node viz pos-4">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                <div>
+                    <h3>Looker & Metabase</h3>
+                    <span>Self-Serve Analytics</span>
+                </div>
+            </div>
+
+            <div class="node domain pos-5">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+                <div>
+                    <h3>Digital Lending</h3>
+                    <span>Credit Scoring</span>
+                </div>
+            </div>
+
+            <div class="node domain pos-6">
+                <i class="fa-solid fa-shield-halved"></i>
+                <div>
+                    <h3>Risk Modeling</h3>
+                    <span>Predictive Analysis</span>
+                </div>
+            </div>
+
+            <div class="node domain pos-7">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <div>
+                    <h3>E-Commerce</h3>
+                    <span>Retention & PLG</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="value-prop">
+            <h1>Translating <span class="highlight">Complex Datasets</span> into Business Logic.</h1>
+            <p>I turn complex data into clear business logic that drives growth. With experience across Digital Lending,
+                E-commerce, Mobility, Gaming, and SaaS, I deliver high-value insights and build dashboards teams
+                actually use.</p>
+        </div>
+
+    </header>
+
+    <section class="kpi-section">
+        <div class="kpi-grid">
+            <div class="kpi-card">
+                <span class="kpi-number">15+</span>
+                <span class="kpi-label">Projects shipped</span>
+            </div>
+            <div class="kpi-card">
+                <span class="kpi-number">+10%</span>
+                <span class="kpi-label">Avg. measurable impact on primary metrics</span>
+            </div>
+            <div class="kpi-card">
+                <span class="kpi-number">6+ Years</span>
+                <span class="kpi-label">Data + Analytics across fintech & e-commerce</span>
+            </div>
+            <div class="kpi-card">
+                <span class="kpi-number">~50k</span>
+                <span class="kpi-label">Scripts, notebooks & tools</span>
+            </div>
+            <div class="kpi-card">
+                <span class="kpi-number">Too many ☕</span>
+                <span class="kpi-label">Coffee Consumed</span>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleTooltip() {
+            const tooltip = document.getElementById('tooltip');
+            tooltip.classList.toggle('active');
+        }
+    </script>
+
+    <footer class="project-footer">
+        <p>© 2025 Data Portfolio | Built with precision and passion for data-driven insights</p>
+    </footer>
+
+</body>
+
+</html>
